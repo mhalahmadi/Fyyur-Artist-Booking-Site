@@ -1,0 +1,16 @@
+https://stackoverflow.com/questions/40849474/flask-csrf-token-missing-error
+https://stackoverflow.com/questions/34902378/where-do-i-get-a-secret-key-for-flask
+https://www.youtube.com/watch?v=0dVq9pjZDL0&ab_channel=AlgorithmAcademy
+https://stackoverflow.com/questions/16573095/case-insensitive-flask-sqlalchemy-query
+https://stackoverflow.com/questions/20041277/flask-sqlalchemy-number-of-results-in-query
+https://github.com/Louis95/fyyur-Artist-Booking-Site/blob/master/app.py
+https://www.pythoncentral.io/sqlalchemy-orm-examples/
+https://stackoverflow.com/questions/60421613/get-user-choice-data-in-many-to-many-relationships-using-flask-sqlalchemy-and-w
+https://stackoverflow.com/questions/49587284/updating-a-specific-row-with-flask-sqlalchemy
+https://stackoverflow.com/questions/25668092/flask-sqlalchemy-many-to-many-insert-data
+https://stackoverflow.com/questions/41270319/how-do-i-query-an-association-table-in-sqlalchemy
+https://www.pythoncentral.io/sqlalchemy-association-tables/
+
+
+
+

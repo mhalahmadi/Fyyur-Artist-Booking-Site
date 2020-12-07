@@ -1,0 +1,1922 @@
+
+2020-10-16 00:38:53,917 INFO: errors [in C:\Users\mirai\Desktop\udacity\FSND-master\projects\01_fyyur\Fyyur_Mona Alahmadi\app.py:564]
+2020-10-16 00:39:02,018 ERROR: Exception on /venues [GET] [in c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry[key]
+KeyError: 6460
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mirai\Desktop\udacity\FSND-master\projects\01_fyyur\Fyyur_Mona Alahmadi\app.py", line 113, in venues
+    venues = Venue.query.group_by(Venue.id).all()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 519, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\orm\scoping.py", line 78, in __call__
+    return self.registry()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\util\_collections.py", line 1012, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\orm\session.py", line 3225, in __call__
+    return self.class_(**local_kw)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 138, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 937, in engine
+    return self.get_engine()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 956, in get_engine
+    return connector.get_engine()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 559, in get_engine
+    sa_url = make_url(uri)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\url.py", line 229, in make_url
+    return _parse_rfc1738_args(name_or_url)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\url.py", line 290, in _parse_rfc1738_args
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Could not parse rfc1738 URL from string 'postgresql//postgres:214151@localhost:5432/fyur'
+2020-10-16 00:39:06,315 ERROR: Exception on /artists [GET] [in c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry[key]
+KeyError: 14100
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mirai\Desktop\udacity\FSND-master\projects\01_fyyur\Fyyur_Mona Alahmadi\app.py", line 291, in artists
+    artist = Artist.query.group_by(Artist.id).all()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 519, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\orm\scoping.py", line 78, in __call__
+    return self.registry()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\util\_collections.py", line 1012, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\orm\session.py", line 3225, in __call__
+    return self.class_(**local_kw)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 138, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 937, in engine
+    return self.get_engine()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 956, in get_engine
+    return connector.get_engine()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 559, in get_engine
+    sa_url = make_url(uri)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\url.py", line 229, in make_url
+    return _parse_rfc1738_args(name_or_url)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\url.py", line 290, in _parse_rfc1738_args
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Could not parse rfc1738 URL from string 'postgresql//postgres:214151@localhost:5432/fyur'
+2020-10-16 00:39:09,808 ERROR: Exception on /venues [GET] [in c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry[key]
+KeyError: 7056
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mirai\Desktop\udacity\FSND-master\projects\01_fyyur\Fyyur_Mona Alahmadi\app.py", line 113, in venues
+    venues = Venue.query.group_by(Venue.id).all()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 519, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\orm\scoping.py", line 78, in __call__
+    return self.registry()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\util\_collections.py", line 1012, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\orm\session.py", line 3225, in __call__
+    return self.class_(**local_kw)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 138, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 937, in engine
+    return self.get_engine()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 956, in get_engine
+    return connector.get_engine()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 559, in get_engine
+    sa_url = make_url(uri)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\url.py", line 229, in make_url
+    return _parse_rfc1738_args(name_or_url)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\url.py", line 290, in _parse_rfc1738_args
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Could not parse rfc1738 URL from string 'postgresql//postgres:214151@localhost:5432/fyur'
+2020-10-16 00:39:11,492 ERROR: Exception on /artists [GET] [in c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry[key]
+KeyError: 17884
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mirai\Desktop\udacity\FSND-master\projects\01_fyyur\Fyyur_Mona Alahmadi\app.py", line 291, in artists
+    artist = Artist.query.group_by(Artist.id).all()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 519, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\orm\scoping.py", line 78, in __call__
+    return self.registry()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\util\_collections.py", line 1012, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\orm\session.py", line 3225, in __call__
+    return self.class_(**local_kw)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 138, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 937, in engine
+    return self.get_engine()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 956, in get_engine
+    return connector.get_engine()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask_sqlalchemy\__init__.py", line 559, in get_engine
+    sa_url = make_url(uri)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\url.py", line 229, in make_url
+    return _parse_rfc1738_args(name_or_url)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\url.py", line 290, in _parse_rfc1738_args
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Could not parse rfc1738 URL from string 'postgresql//postgres:214151@localhost:5432/fyur'
+2020-10-19 21:28:52,866 INFO: errors [in C:\Users\mirai\Desktop\udacity\FSND-master\projects\01_fyyur\Fyyur_Mona\app.py:569]
+2020-10-19 21:29:11,914 INFO: errors [in C:\Users\mirai\Desktop\udacity\FSND-master\projects\01_fyyur\Fyyur_Mona\app.py:569]
+2020-10-19 21:30:05,916 INFO: errors [in C:\Users\mirai\Desktop\udacity\FSND-master\projects\01_fyyur\Fyyur_Mona\app.py:569]
+2020-10-19 21:30:32,490 INFO: errors [in C:\Users\mirai\Desktop\udacity\FSND-master\projects\01_fyyur\Fyyur_Mona\app.py:569]
+2020-10-19 22:05:11,700 INFO: errors [in C:\Users\mirai\Desktop\udacity\FSND-master\projects\01_fyyur\Fyyur_Mona\app.py:569]
+2020-10-19 22:05:26,051 ERROR: Exception on /venues [GET] [in c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\base.py", line 1248, in _execute_context
+    self.dialect.do_execute(
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\default.py", line 580, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.GroupingError: column "Venue.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name...
+               ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mirai\Desktop\udacity\FSND-master\projects\01_fyyur\Fyyur_Mona\app.py", line 116, in venues
+    venues = Venue.query.group_by(Venue.city).all()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\orm\query.py", line 3186, in all
+    return list(self)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\orm\query.py", line 3342, in __iter__
+    return self._execute_and_instances(context)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\orm\query.py", line 3367, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\base.py", line 1101, in _execute_clauseelement
+    ret = self._execute_context(
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\base.py", line 1252, in _execute_context
+    self._handle_dbapi_exception(
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\base.py", line 1248, in _execute_context
+    self.dialect.do_execute(
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\sqlalchemy\engine\default.py", line 580, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.GroupingError) column "Venue.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name...
+               ^
+
+[SQL: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name", "Venue".city AS "Venue_city", "Venue".state AS "Venue_state", "Venue".address AS "Venue_address", "Venue".phone AS "Venue_phone", "Venue".image_link AS "Venue_image_link", "Venue".facebook_link AS "Venue_facebook_link", "Venue".genres AS "Venue_genres", "Venue".website AS "Venue_website", "Venue".seeking_talent AS "Venue_seeking_talent", "Venue".seeking_description AS "Venue_seeking_description" 
+FROM "Venue" GROUP BY "Venue".city]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-10-20 00:37:08,541 INFO: errors [in C:\Users\mirai\Desktop\udacity\FSND-master\projects\01_fyyur\Fyyur_Mona\app.py:458]
+2020-10-20 00:37:18,915 INFO: errors [in C:\Users\mirai\Desktop\udacity\FSND-master\projects\01_fyyur\Fyyur_Mona\app.py:458]
+2020-10-20 00:37:28,540 INFO: errors [in C:\Users\mirai\Desktop\udacity\FSND-master\projects\01_fyyur\Fyyur_Mona\app.py:458]
+2020-10-20 00:37:55,472 INFO: errors [in C:\Users\mirai\Desktop\udacity\FSND-master\projects\01_fyyur\Fyyur_Mona\app.py:458]
+2020-10-20 00:37:59,605 INFO: errors [in C:\Users\mirai\Desktop\udacity\FSND-master\projects\01_fyyur\Fyyur_Mona\app.py:458]
+2020-10-21 17:22:13,504 INFO: errors [in C:\Users\mirai\Desktop\udacity\FSND-master\projects\01_fyyur\Fyyur_Mona\app.py:460]
+2020-10-21 17:22:25,415 ERROR: Exception on /shows [GET] [in c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mirai\Desktop\udacity\FSND-master\projects\01_fyyur\Fyyur_Mona\app.py", line 390, in shows
+    showSh = Shows.query.all()
+NameError: name 'Shows' is not defined
+2020-10-21 17:22:40,496 ERROR: Exception on /shows/create [POST] [in c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mirai\Desktop\udacity\FSND-master\projects\01_fyyur\Fyyur_Mona\app.py", line 436, in create_show_submission
+    showing = Show(artist_id = request.form.get('artist_id'), venue_id= request.form.get('venue_id'), start_time= request.form.get('start_time'))
+TypeError: 'Table' object is not callable
+2020-10-21 17:22:57,124 ERROR: Exception on /shows/create [POST] [in c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py:1890]
+Traceback (most recent call last):
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\mirai\appdata\local\programs\python\python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mirai\Desktop\udacity\FSND-master\projects\01_fyyur\Fyyur_Mona\app.py", line 436, in create_show_submission
+    showing = Show(artist_id = request.form.get('artist_id'), venue_id= request.form.get('venue_id'), start_time= request.form.get('start_time'))
+TypeError: 'Table' object is not callable
+2020-12-05 15:43:20,903 INFO: errors [in C:\Users\mhala\Desktop\Fyyur_Mona\app.py:469]
+2020-12-05 15:43:30,033 ERROR: Exception on /static/css/layout.main.css [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:43:30,037 ERROR: Exception on /static/css/main.responsive.css [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:43:30,046 ERROR: Exception on /static/css/main.quickfix.css [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:43:30,050 ERROR: Exception on /static/js/libs/moment.min.js [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:43:30,523 ERROR: Exception on /static/js/plugins.js [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:44:57,009 ERROR: Exception on /static/css/bootstrap.min.css [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:44:57,024 ERROR: Exception on /static/css/layout.main.css [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:44:57,074 ERROR: Exception on /static/css/main.css [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:44:57,222 ERROR: Exception on /static/css/main.responsive.css [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:44:57,318 ERROR: Exception on /static/css/main.quickfix.css [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:44:57,323 ERROR: Exception on /static/js/libs/modernizr-2.8.2.min.js [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:44:57,410 ERROR: Exception on /static/js/libs/moment.min.js [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:44:57,786 ERROR: Exception on /static/js/script.js [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:44:57,794 ERROR: Exception on /static/img/front-splash.jpg [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:44:57,894 ERROR: Exception on /static/js/libs/bootstrap-3.1.1.min.js [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:44:57,939 ERROR: Exception on /static/js/plugins.js [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:44:58,305 ERROR: Exception on /static/ico/favicon.png [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:44:58,444 ERROR: Exception on /static/ico/favicon.png [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:00,611 ERROR: Exception on /static/css/bootstrap.min.css [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:00,617 ERROR: Exception on /static/css/layout.main.css [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:00,671 ERROR: Exception on /static/css/main.css [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:00,675 ERROR: Exception on /static/css/main.responsive.css [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:00,969 ERROR: Exception on /static/css/main.quickfix.css [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:01,169 ERROR: Exception on /static/js/libs/modernizr-2.8.2.min.js [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:01,173 ERROR: Exception on /static/js/libs/moment.min.js [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:02,101 ERROR: Exception on /static/js/script.js [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:02,284 ERROR: Exception on /static/js/libs/bootstrap-3.1.1.min.js [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:02,334 ERROR: Exception on /static/js/plugins.js [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:02,555 ERROR: Exception on /static/ico/favicon.png [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:02,892 ERROR: Exception on /static/ico/favicon.png [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:10,485 ERROR: Exception on /static/ico/favicon.png [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:10,574 ERROR: Exception on /static/ico/favicon.png [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:13,696 ERROR: Exception on /static/css/bootstrap.min.css [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:13,729 ERROR: Exception on /static/css/layout.main.css [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:13,732 ERROR: Exception on /static/css/main.css [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:13,736 ERROR: Exception on /static/css/main.responsive.css [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:13,830 ERROR: Exception on /static/css/main.quickfix.css [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:13,872 ERROR: Exception on /static/js/libs/modernizr-2.8.2.min.js [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:13,925 ERROR: Exception on /static/js/libs/moment.min.js [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:14,538 ERROR: Exception on /static/js/script.js [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:14,596 ERROR: Exception on /static/js/libs/bootstrap-3.1.1.min.js [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:14,644 ERROR: Exception on /static/js/plugins.js [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:15,056 ERROR: Exception on /static/ico/favicon.png [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:15,172 ERROR: Exception on /static/ico/favicon.png [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:18,137 ERROR: Exception on /static/ico/favicon.png [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:45:18,267 ERROR: Exception on /static/ico/favicon.png [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1476]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2022, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1537, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1535, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1521, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 493, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 956, in send_static_file
+    return send_from_directory(self.static_folder, filename, max_age=max_age)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\helpers.py", line 657, in send_from_directory
+    return werkzeug.utils.send_from_directory(
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\werkzeug\__init__.py", line 71, in __getattr__
+    value = getattr(self._real_module, item)
+AttributeError: module 'werkzeug.utils' has no attribute 'send_from_directory'
+2020-12-05 15:57:45,661 INFO: errors [in C:\Users\mhala\Desktop\Fyyur_Mona\app.py:470]
+2020-12-05 17:18:26,865 INFO: errors [in app.py:470]
+2020-12-05 17:19:21,595 ERROR: Exception on /venues [GET] [in C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\default.py", line 580, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedTable: relation "Venue" does not exist
+LINE 2: FROM "Venue" GROUP BY "Venue".id
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 114, in venues
+    venues = Venue.query.group_by(Venue.id).all()
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\query.py", line 3186, in all
+    return list(self)
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\query.py", line 3342, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\query.py", line 3367, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\sql\elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\default.py", line 580, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) relation "Venue" does not exist
+LINE 2: FROM "Venue" GROUP BY "Venue".id
+             ^
+
+[SQL: SELECT "Venue".id AS "Venue_id", "Venue".city AS "Venue_city", "Venue".state AS "Venue_state", "Venue".address AS "Venue_address", "Venue".phone AS "Venue_phone", "Venue".image_link AS "Venue_image_link", "Venue".facebook_link AS "Venue_facebook_link", "Venue".website AS "Venue_website", "Venue".seeking_talent AS "Venue_seeking_talent", "Venue".seeking_description AS "Venue_seeking_description" 
+FROM "Venue" GROUP BY "Venue".id]
+(Background on this error at: http://sqlalche.me/e/f405)
+2020-12-05 17:20:07,398 ERROR: Exception on /venues/create [POST] [in C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 192, in create_venue_submission
+    createVenue = Venue(name=name , id=id , city=city , state=state , address=address , genres=genres , phone=phone, facebook_link=facebook_link)
+  File "<string>", line 4, in __init__
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\state.py", line 441, in _initialize_instance
+    manager.dispatch.init_failure(self, args, kwargs)
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\util\compat.py", line 153, in reraise
+    raise value
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\state.py", line 438, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "C:\Users\mhala\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\ext\declarative\base.py", line 840, in _declarative_constructor
+    "%r is an invalid keyword argument for %s" % (k, cls_.__name__)
+TypeError: 'name' is an invalid keyword argument for Venue
+2020-12-05 17:20:31,587 INFO: errors [in app.py:470]
+2020-12-05 17:29:39,359 INFO: errors [in app.py:467]
+2020-12-05 18:18:33,601 INFO: errors [in app.py:493]
+2020-12-05 18:26:11,244 INFO: errors [in C:\Users\mhala\Desktop\Fyyur_Mona\app.py:494]
+2020-12-05 18:28:50,276 INFO: errors [in C:\Users\mhala\Desktop\Fyyur_Mona\app.py:494]
+2020-12-05 18:30:08,689 INFO: errors [in C:\Users\mhala\Desktop\Fyyur_Mona\app.py:494]
+2020-12-05 18:31:17,166 INFO: errors [in C:\Users\mhala\Desktop\Fyyur_Mona\app.py:494]
+2020-12-05 18:31:28,595 INFO: errors [in C:\Users\mhala\Desktop\Fyyur_Mona\app.py:494]
+2020-12-05 18:35:57,080 INFO: errors [in C:\Users\mhala\Desktop\Fyyur_Mona\app.py:494]
+2020-12-05 18:36:26,807 INFO: errors [in C:\Users\mhala\Desktop\Fyyur_Mona\app.py:494]
+2020-12-05 18:37:57,183 INFO: errors [in C:\Users\mhala\Desktop\Fyyur_Mona\app.py:494]
+2020-12-05 18:38:05,214 INFO: errors [in C:\Users\mhala\Desktop\Fyyur_Mona\app.py:494]
+2020-12-05 18:38:56,572 INFO: errors [in C:\Users\mhala\Desktop\Fyyur_Mona\app.py:494]
+2020-12-05 18:47:42,171 INFO: errors [in C:\Users\mhala\Desktop\Fyyur_Mona\app.py:494]
+2020-12-05 18:53:00,134 INFO: errors [in C:\Users\mhala\Desktop\Fyyur_Mona\app.py:494]
+2020-12-05 19:15:49,874 INFO: errors [in C:\Users\mhala\Desktop\Fyyur_Mona\app.py:494]
+2020-12-05 19:28:55,302 INFO: errors [in C:\Users\mhala\Desktop\Fyyur_Mona\app.py:494]
+2020-12-05 19:39:29,576 INFO: errors [in C:\Users\mhala\Desktop\Fyyur_Mona\app.py:494]
+2020-12-05 19:40:19,846 INFO: errors [in C:\Users\mhala\Desktop\Fyyur_Mona\app.py:494]
+2020-12-05 20:14:42,317 INFO: errors [in app.py:494]
+2020-12-05 20:14:46,841 ERROR: Exception on /venues [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\ext\declarative\clsregistry.py", line 294, in __call__
+    x = eval(self.arg, globals(), self._dict)
+  File "<string>", line 1, in <module>
+NameError: name 'show' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 138, in venues
+    venues = Venue.query.group_by(Venue.id).all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 517, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 441, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 420, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 1337, in _configure_all
+    configure_mappers()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 3248, in configure_mappers
+    mapper._post_configure_properties()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 1947, in _post_configure_properties
+    prop.init()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\interfaces.py", line 196, in init
+    self.do_init()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\relationships.py", line 1860, in do_init
+    self._process_dependent_arguments()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\relationships.py", line 1922, in _process_dependent_arguments
+    self.target = self.entity.persist_selectable
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\util\langhelpers.py", line 855, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\relationships.py", line 1827, in entity
+    argument = self.argument()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\ext\declarative\clsregistry.py", line 306, in __call__
+    % (self.prop.parent, self.arg, n.args[0], self.cls)
+sqlalchemy.exc.InvalidRequestError: When initializing mapper mapped class Venue->Venue, expression 'show' failed to locate a name ("name 'show' is not defined"). If this is a class name, consider adding this relationship() to the <class '__main__.Venue'> class after both dependent classes have been defined.
+2020-12-05 20:14:54,762 ERROR: Exception on /venues [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 138, in venues
+    venues = Venue.query.group_by(Venue.id).all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 517, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 441, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 420, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 1337, in _configure_all
+    configure_mappers()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 3244, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class Venue->Venue'. Original exception was: When initializing mapper mapped class Venue->Venue, expression 'show' failed to locate a name ("name 'show' is not defined"). If this is a class name, consider adding this relationship() to the <class '__main__.Venue'> class after both dependent classes have been defined.
+2020-12-05 20:15:24,258 ERROR: Exception on /venues/create [POST] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 216, in create_venue_submission
+    createVenue = Venue(name=name , id=id , city=city , state=state , address=address , genres=genres , phone=phone, facebook_link=facebook_link)
+  File "<string>", line 2, in __init__
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\instrumentation.py", line 376, in _new_state_if_none
+    state = self._state_constructor(instance, self)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\util\langhelpers.py", line 855, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\instrumentation.py", line 202, in _state_constructor
+    self.dispatch.first_init(self, self.class_)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\event\attr.py", line 322, in __call__
+    fn(*args, **kw)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 3360, in _event_on_first_init
+    configure_mappers()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 3244, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class Venue->Venue'. Original exception was: When initializing mapper mapped class Venue->Venue, expression 'show' failed to locate a name ("name 'show' is not defined"). If this is a class name, consider adding this relationship() to the <class '__main__.Venue'> class after both dependent classes have been defined.
+2020-12-05 20:15:27,100 ERROR: Exception on /venues [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 138, in venues
+    venues = Venue.query.group_by(Venue.id).all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 517, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 441, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 420, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 1337, in _configure_all
+    configure_mappers()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 3244, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class Venue->Venue'. Original exception was: When initializing mapper mapped class Venue->Venue, expression 'show' failed to locate a name ("name 'show' is not defined"). If this is a class name, consider adding this relationship() to the <class '__main__.Venue'> class after both dependent classes have been defined.
+2020-12-05 20:15:35,384 ERROR: Exception on /venues [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 138, in venues
+    venues = Venue.query.group_by(Venue.id).all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 517, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 441, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 420, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 1337, in _configure_all
+    configure_mappers()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 3244, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class Venue->Venue'. Original exception was: When initializing mapper mapped class Venue->Venue, expression 'show' failed to locate a name ("name 'show' is not defined"). If this is a class name, consider adding this relationship() to the <class '__main__.Venue'> class after both dependent classes have been defined.
+2020-12-05 20:19:26,838 ERROR: Exception on /venues [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 138, in venues
+    venues = Venue.query.group_by(Venue.id).all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 517, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 441, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 420, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 1337, in _configure_all
+    configure_mappers()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 3244, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class Venue->Venue'. Original exception was: When initializing mapper mapped class Venue->Venue, expression 'show' failed to locate a name ("name 'show' is not defined"). If this is a class name, consider adding this relationship() to the <class '__main__.Venue'> class after both dependent classes have been defined.
+2020-12-05 20:19:27,021 ERROR: Exception on /venues [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 138, in venues
+    venues = Venue.query.group_by(Venue.id).all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 517, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 441, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 420, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 1337, in _configure_all
+    configure_mappers()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 3244, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class Venue->Venue'. Original exception was: When initializing mapper mapped class Venue->Venue, expression 'show' failed to locate a name ("name 'show' is not defined"). If this is a class name, consider adding this relationship() to the <class '__main__.Venue'> class after both dependent classes have been defined.
+2020-12-05 20:19:42,911 ERROR: Exception on /venues/create [POST] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 216, in create_venue_submission
+    createVenue = Venue(name=name  , city=city , state=state , address=address , genres=genres , phone=phone, facebook_link=facebook_link)
+  File "<string>", line 2, in __init__
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\instrumentation.py", line 376, in _new_state_if_none
+    state = self._state_constructor(instance, self)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\util\langhelpers.py", line 855, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\instrumentation.py", line 202, in _state_constructor
+    self.dispatch.first_init(self, self.class_)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\event\attr.py", line 322, in __call__
+    fn(*args, **kw)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 3360, in _event_on_first_init
+    configure_mappers()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 3244, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class Venue->Venue'. Original exception was: When initializing mapper mapped class Venue->Venue, expression 'show' failed to locate a name ("name 'show' is not defined"). If this is a class name, consider adding this relationship() to the <class '__main__.Venue'> class after both dependent classes have been defined.
+2020-12-05 20:19:47,321 ERROR: Exception on /venues [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 138, in venues
+    venues = Venue.query.group_by(Venue.id).all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 517, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 441, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 420, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 1337, in _configure_all
+    configure_mappers()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 3244, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class Venue->Venue'. Original exception was: When initializing mapper mapped class Venue->Venue, expression 'show' failed to locate a name ("name 'show' is not defined"). If this is a class name, consider adding this relationship() to the <class '__main__.Venue'> class after both dependent classes have been defined.
+2020-12-05 20:21:04,690 ERROR: Exception on /venues [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 138, in venues
+    venues = Venue.query.group_by(Venue.id).all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 517, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 441, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 420, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 1337, in _configure_all
+    configure_mappers()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 3244, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class Venue->Venue'. Original exception was: When initializing mapper mapped class Venue->Venue, expression 'show' failed to locate a name ("name 'show' is not defined"). If this is a class name, consider adding this relationship() to the <class '__main__.Venue'> class after both dependent classes have been defined.
+2020-12-05 20:25:44,047 ERROR: Exception on /venues [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 138, in venues
+    venues = Venue.query.group_by(Venue.id).all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 517, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 441, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 420, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 1337, in _configure_all
+    configure_mappers()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 3244, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class Venue->Venue'. Original exception was: When initializing mapper mapped class Venue->Venue, expression 'show' failed to locate a name ("name 'show' is not defined"). If this is a class name, consider adding this relationship() to the <class '__main__.Venue'> class after both dependent classes have been defined.
+2020-12-05 20:25:48,567 ERROR: Exception on /venues [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 138, in venues
+    venues = Venue.query.group_by(Venue.id).all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 517, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 441, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 420, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 1337, in _configure_all
+    configure_mappers()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 3244, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class Venue->Venue'. Original exception was: When initializing mapper mapped class Venue->Venue, expression 'show' failed to locate a name ("name 'show' is not defined"). If this is a class name, consider adding this relationship() to the <class '__main__.Venue'> class after both dependent classes have been defined.
+2020-12-05 20:25:50,331 ERROR: Exception on /artists [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 258, in artists
+    artist = Artist.query.group_by(Artist.id).all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 517, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 441, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 420, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 1337, in _configure_all
+    configure_mappers()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 3244, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class Venue->Venue'. Original exception was: When initializing mapper mapped class Venue->Venue, expression 'show' failed to locate a name ("name 'show' is not defined"). If this is a class name, consider adding this relationship() to the <class '__main__.Venue'> class after both dependent classes have been defined.
+2020-12-05 20:25:51,747 ERROR: Exception on /shows [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 430, in shows
+    artist = Artist.query.group_by(Artist.id).all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 517, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 441, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 420, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 1337, in _configure_all
+    configure_mappers()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 3244, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class Venue->Venue'. Original exception was: When initializing mapper mapped class Venue->Venue, expression 'show' failed to locate a name ("name 'show' is not defined"). If this is a class name, consider adding this relationship() to the <class '__main__.Venue'> class after both dependent classes have been defined.
+2020-12-05 20:25:53,806 ERROR: Exception on /venues [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 138, in venues
+    venues = Venue.query.group_by(Venue.id).all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 517, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 441, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 420, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 1337, in _configure_all
+    configure_mappers()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 3244, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class Venue->Venue'. Original exception was: When initializing mapper mapped class Venue->Venue, expression 'show' failed to locate a name ("name 'show' is not defined"). If this is a class name, consider adding this relationship() to the <class '__main__.Venue'> class after both dependent classes have been defined.
+2020-12-05 20:27:39,356 ERROR: Exception on /shows [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 430, in shows
+    artist = Artist.query.group_by(Artist.id).all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 517, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 441, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 420, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 1337, in _configure_all
+    configure_mappers()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 3244, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class Venue->Venue'. Original exception was: When initializing mapper mapped class Venue->Venue, expression 'show' failed to locate a name ("name 'show' is not defined"). If this is a class name, consider adding this relationship() to the <class '__main__.Venue'> class after both dependent classes have been defined.
+2020-12-05 20:27:41,068 ERROR: Exception on /venues [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 138, in venues
+    venues = Venue.query.group_by(Venue.id).all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 517, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 441, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 420, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 1337, in _configure_all
+    configure_mappers()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 3244, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class Venue->Venue'. Original exception was: When initializing mapper mapped class Venue->Venue, expression 'show' failed to locate a name ("name 'show' is not defined"). If this is a class name, consider adding this relationship() to the <class '__main__.Venue'> class after both dependent classes have been defined.
+2020-12-05 20:31:56,709 ERROR: Exception on /venues [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 138, in venues
+    venues = Venue.query.group_by(Venue.id).all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 517, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 441, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 420, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 1337, in _configure_all
+    configure_mappers()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 3244, in configure_mappers
+    raise e
+sqlalchemy.exc.InvalidRequestError: One or more mappers failed to initialize - can't proceed with initialization of other mappers. Triggering mapper: 'mapped class Venue->Venue'. Original exception was: When initializing mapper mapped class Venue->Venue, expression 'show' failed to locate a name ("name 'show' is not defined"). If this is a class name, consider adding this relationship() to the <class '__main__.Venue'> class after both dependent classes have been defined.
+2020-12-05 20:32:12,777 INFO: errors [in app.py:494]
+2020-12-05 20:32:20,210 ERROR: Exception on /venues/create [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 200, in create_venue_form
+    return render_template('forms/new_venue.html', form=form)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\templates\forms\new_venue.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\templates\forms\new_venue.html", line 32, in block "content"
+    {{ from.image_link(class_ = 'form-control', placeholder='http://')}}
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\jinja2\environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'from' is undefined
+2020-12-05 20:32:22,374 ERROR: Exception on /venues [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\ext\declarative\clsregistry.py", line 294, in __call__
+    x = eval(self.arg, globals(), self._dict)
+  File "<string>", line 1, in <module>
+NameError: name 'show' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 138, in venues
+    venues = Venue.query.group_by(Venue.id).all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask_sqlalchemy\__init__.py", line 517, in __get__
+    mapper = orm.class_mapper(type)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 441, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\base.py", line 420, in _inspect_mapped_class
+    mapper._configure_all()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 1337, in _configure_all
+    configure_mappers()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 3248, in configure_mappers
+    mapper._post_configure_properties()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\mapper.py", line 1947, in _post_configure_properties
+    prop.init()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\interfaces.py", line 196, in init
+    self.do_init()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\relationships.py", line 1860, in do_init
+    self._process_dependent_arguments()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\relationships.py", line 1922, in _process_dependent_arguments
+    self.target = self.entity.persist_selectable
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\util\langhelpers.py", line 855, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\orm\relationships.py", line 1827, in entity
+    argument = self.argument()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\sqlalchemy\ext\declarative\clsregistry.py", line 306, in __call__
+    % (self.prop.parent, self.arg, n.args[0], self.cls)
+sqlalchemy.exc.InvalidRequestError: When initializing mapper mapped class Venue->Venue, expression 'show' failed to locate a name ("name 'show' is not defined"). If this is a class name, consider adding this relationship() to the <class '__main__.Venue'> class after both dependent classes have been defined.
+2020-12-05 20:32:24,819 ERROR: Exception on /venues/create [GET] [in C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 200, in create_venue_form
+    return render_template('forms/new_venue.html', form=form)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\templates\forms\new_venue.html", line 1, in top-level template code
+    {% extends 'layouts/main.html' %}
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\templates\layouts\main.html", line 103, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\templates\forms\new_venue.html", line 32, in block "content"
+    {{ from.image_link(class_ = 'form-control', placeholder='http://')}}
+  File "C:\Users\mhala\Desktop\Fyyur_Mona\env\lib\site-packages\jinja2\environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'from' is undefined
+2020-12-05 20:33:00,434 INFO: errors [in app.py:494]
